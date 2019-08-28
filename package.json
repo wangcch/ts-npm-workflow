@@ -9,6 +9,10 @@
     "test": "rm -rf ./dist/* && tsc -d --project tsconfig.test.json --outDir ./dist/ && ava",
     "prepare": "yarn build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangcch/ts-npm-workflow.git"
+  },
   "keywords": [
     "workflow",
     "npm",
