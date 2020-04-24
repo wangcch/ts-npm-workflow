@@ -4,9 +4,14 @@
   "description": "npm workflow for function package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "module": "esm/index.js",
+  "sideEffects": false,
   "scripts": {
-    "build": "rm -rf ./lib/* && tsc -d --project tsconfig.json --outDir ./lib/",
-    "test": "rm -rf ./dist/* && tsc -d --project tsconfig.test.json --outDir ./dist/ && ava",
+    "build": "rm -rf ./lib/* ./esm/* && yarn build:cjs && yarn build:es",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m ESNext --outDir ./esm",
+    "build:test": "rm -rf ./build/* && tsc --project tsconfig.test.json --outDir ./build",
+    "test": "yarn build:test && ava",
     "prepare": "yarn build"
   },
   "repository": {
@@ -22,6 +27,10 @@
   ],
   "author": "wangcch <wangcch.cc@gmail.com>",
   "license": "MIT",
+  "files": [
+    "esm",
+    "lib"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@ava/babel": "^1.0.1",
