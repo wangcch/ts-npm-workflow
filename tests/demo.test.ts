@@ -1,12 +1,12 @@
 import test from "ava";
 
-import demo, { asyncFunc } from "../src";
+import { asyncFunc, demo } from "../src";
 
-test("demo", t => {
+test("demo", (t) => {
   t.is(demo, "demo");
 });
 
-test("async", async t => {
+test("async", async (t) => {
   const data = await asyncFunc();
   t.is(data, "async");
 });

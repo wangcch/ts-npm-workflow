@@ -1,7 +1,3 @@
-const demo = "demo";
+import asyncFunc, { demo } from "./demo";
 
-export const asyncFunc = async () => {
-  return "async";
-};
-
-export default demo;
+export { asyncFunc, demo };
