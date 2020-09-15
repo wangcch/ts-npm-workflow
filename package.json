@@ -12,6 +12,8 @@
     "build:es": "tsc -m ESNext --outDir ./esm",
     "build:test": "rm -rf ./build/* && tsc --project tsconfig.test.json --outDir ./build",
     "test": "yarn build:test && ava",
+    "lint": "eslint src/**/*",
+    "prettier": "prettier --write ./src/**/* --config ./.prettierrc",
     "prepare": "yarn build"
   },
   "repository": {
@@ -35,7 +37,13 @@
   "devDependencies": {
     "@ava/babel": "^1.0.1",
     "@ava/typescript": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
     "ava": "^3.12.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
