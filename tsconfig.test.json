@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": true
+    "module": "ES2015"
   },
   "include": ["src/**/*", "tests/**/*"]
 }
