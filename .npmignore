@@ -16,4 +16,6 @@ tsconfig.*.json
 ava.config.js
 
 .travis.yml
-.prettierrc
+.prettier*
+.eslintrc.json
+.eslintignore

@@ -12,8 +12,8 @@
     "build:es": "tsc -m ESNext --outDir ./esm",
     "build:test": "rm -rf ./build/* && tsc --project tsconfig.test.json --outDir ./build",
     "test": "yarn build:test && ava",
-    "lint": "eslint src/**/*",
-    "prettier": "prettier --write ./src/**/* --config ./.prettierrc",
+    "lint": "eslint .",
+    "prettier": "prettier --write '**/*' --config ./.prettierrc",
     "prepare": "yarn build"
   },
   "repository": {
