@@ -1,7 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.test.json"
+    "project": "./tsconfig.eslint.json"
   },
   "extends": [
     "eslint:recommended",
@@ -10,9 +10,6 @@
     "plugin:prettier/recommended"
   ],
   "plugins": ["@typescript-eslint", "prettier"],
-  "env": {
-    "jest": true
-  },
   "rules": {
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
