@@ -5,7 +5,8 @@
 
 /build
 /src
-/tests
+tests
+coverage
 
 npm-debug.log*
 yarn-debug.log*
@@ -19,3 +20,6 @@ ava.config.js
 .prettier*
 .eslintrc.json
 .eslintignore
+
+yarn.lock
+package-lock.json
